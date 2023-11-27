@@ -11,12 +11,12 @@ print(folder_list)
 for folder in folder_list:
     #add back slash between spaces
     path = root + "/" + folder 
-    if (folder != "Label.py"):
+    if (folder != "Label.py" and folder != ".DS_Store"):
         file_list = os.listdir(path)
         #print(file_list)
         i = 0
         for file in file_list:
             oldfile_path = path + "/" + file
-            newfile_path = path + "/" + folder + " " + str(i)
+            newfile_path = path + "/" + folder + " " + str(i) + ".jpg"
             os.rename(oldfile_path, newfile_path)
             i = i + 1 
