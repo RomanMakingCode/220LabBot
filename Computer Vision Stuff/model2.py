@@ -77,6 +77,7 @@ test_generator = test_datagen.flow_from_directory(
     shuffle=False
 )
 
+'''
 # Predict
 predictions = model.predict(test_generator)
 
@@ -91,5 +92,6 @@ for p in predictions:
     max_index = np.argmax(p)
     print("Model : " + labels[max_index] + ", Correct : " + correct_labels[count])
     count = count + 1
+'''
 
 print('done')
